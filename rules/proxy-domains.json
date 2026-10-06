@@ -1,1 +1,25 @@
-
+{
+  "version": 5,
+  "rules": [
+    {
+      "domain_suffix": [
+        "openai.com",
+        "chatgpt.com",
+        "oaistatic.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "google.com",
+        "googleapis.com",
+        "gstatic.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "anthropic.com",
+        "claude.ai"
+      ]
+    }
+  ]
+}
