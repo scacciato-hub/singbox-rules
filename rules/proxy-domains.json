@@ -12,9 +12,71 @@
       "domain_suffix": [
         "google.com",
         "googleapis.com",
-        "gstatic.com"
+        "gstatic.com",
+        "ai.google.dev",
+        "aisandbox-pa.googleapis.com",
+        "aistudio.google.com",
+        "aitestkitchen.withgoogle.com",
+        "alkalicore-pa.clients6.google.com",
+        "alkalimakersuite-pa.clients6.google.com",
+        "apis.google.com",
+        "appcatalyst.pa.googleapis.com",
+        "assistant-s3-pa.googleapis.com",
+        "bard.google.com",
+        "daily-cloudcode-pa.googleapis.com",
+        "deepmind.com",
+        "deepmind.google",
+        "developerprofiles-pa.googleapis.com",
+        "geller-pa.googleapis.com",
+        "gemini.google",
+        "gemini.google.com",
+        "generativeai.google",
+        "generativelanguage.googleapis.com",
+        "jules.google",
+        "jules.google.com",
+        "labs.google.com",
+        "lookerstudio.google.com",
+        "makersuite.google.com",
+        "notebooklm.google",
+        "notebooklm.google.com",
+        "notebooklm-pa.googleapis.com",
+        "o.pki.goog",
+        "opal.google",
+        "opal.google.com",
+        "opal.withgoogle.com",
+        "people-pa.clients6.google.com",
+        "proactivebackend-pa.googleapis.com",
+        "robinfrontend-pa.googleapis.com",
+        "signaler-pa.clients6.google.com",
+        "stitch.withgoogle.com",
+        "suggestqueries.google.com",
+        "waa-pa.clients6.google.com",
+        "webchannel-alkalimakersuite-pa.clients6.google.com",
+        "datastudio.google.com"
+
       ]
     },
+
+    {
+      "domain_suffix": [
+        "youtube.com",
+        "googlevideo.com",
+        "ytimg.com",
+        "ggpht.com",
+        "googleapis.com",
+        "googleusercontent.com",
+        "gstatic.com",
+        "app-measurement.com"
+      ]
+    },
+
+    {
+      "domain_suffix": [
+        "rutracker.org",
+        "flibusta.is"
+      ]
+    },
+
     {
       "domain_suffix": [
         "anthropic.com",
