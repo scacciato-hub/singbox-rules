@@ -1,0 +1,2 @@
+# singbox-rules
+for ios
