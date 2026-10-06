@@ -1,1 +1,43 @@
+name: Build sing-box rule-sets
 
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download sing-box 1.14.2
+        run: |
+          curl -L -o sing-box.tar.gz \
+            https://github.com/SagerNet/sing-box/releases/download/v1.14.2/sing-box-1.14.2-linux-amd64.tar.gz
+
+          tar -xzf sing-box.tar.gz
+
+      - name: Compile domain rule-set
+        run: |
+          ./sing-box-1.14.2-linux-amd64/sing-box rule-set compile \
+            rules/proxy-domains.json \
+            -o proxy-domains.srs
+
+      - name: Compile IP rule-set
+        run: |
+          ./sing-box-1.14.2-linux-amd64/sing-box rule-set compile \
+            rules/proxy-ips.json \
+            -o proxy-ips.srs
+
+      - name: Upload rule-sets
+        uses: actions/upload-artifact@v4
+        with:
+          name: sing-box-rule-sets
+          path: |
+            proxy-domains.srs
+            proxy-ips.srs
