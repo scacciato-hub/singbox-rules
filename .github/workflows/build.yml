@@ -7,6 +7,11 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -34,10 +39,29 @@ jobs:
             rules/proxy-ips.json \
             -o proxy-ips.srs
 
-      - name: Upload rule-sets
-        uses: actions/upload-artifact@v4
+      - name: Prepare Pages
+        run: |
+          mkdir public
+          cp proxy-domains.srs public/
+          cp proxy-ips.srs public/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: sing-box-rule-sets
-          path: |
-            proxy-domains.srs
-            proxy-ips.srs
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
