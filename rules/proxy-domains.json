@@ -74,6 +74,23 @@
     },
     {
       "domain_suffix": [
+        "wa.me",
+        "web.whatsapp.com",
+        "whatsapp.cc",
+        "whatsapp.com",
+        "whatsapp.info",
+        "whatsapp.net",
+        "whatsapp.org",
+        "whatsapp.tv",
+        "whatsappbrand.com",
+        "whatsapp-plus.info",
+        "whatsapp-plus.me",
+        "whatsapp-plus.net",
+        "wl.co"
+      ]
+    },
+    {
+      "domain_suffix": [
         "google.com",
         "googleapis.com",
         "gstatic.com",
@@ -195,6 +212,13 @@
         "rutracker.org",
         "www.rutracker.org",
         "flibusta.is"
+      ]
+    },
+
+    {
+      "domain_suffix": [
+        "mdza.io",
+        "meduza.io"
       ]
     },
 
